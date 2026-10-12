@@ -1,0 +1,65 @@
+PORTAL PLINIO + SISTEMA DE CALIFICACIONES (PHP + MYSQL)
+======================================================
+
+Esta versión conserva el portal público original e integra un sistema académico real en el área Docentes.
+
+FUNCIONES INCLUIDAS
+- Inicio de sesión con contraseñas cifradas (password_hash de PHP).
+- Roles: Administrador, Director, Coordinador y Docente.
+- Registro de estudiantes.
+- Años escolares, grados/secciones y asignaturas.
+- Asignación de docente a sección/asignatura.
+- Registro de P1, P2, P3 y P4.
+- Promedio automático en pantalla.
+- Asistencia/ausencia por P1-P4.
+- Módulos técnicos y Resultados de Aprendizaje (RA).
+- Situación final Promovido/a o Repitente.
+- Boletín individual imprimible / guardable como PDF.
+
+INSTALACIÓN EN HOSTINGER
+1. En hPanel cree una base de datos MySQL y un usuario MySQL.
+2. Abra el archivo sistema/config.php.
+3. Escriba allí: nombre de base de datos, usuario y contraseña. Normalmente db_host puede quedar en localhost.
+4. Suba TODO el contenido de esta carpeta a public_html (o al dominio/subdominio donde estará el portal).
+5. En el navegador abra:
+   https://SU-DOMINIO/sistema/setup.php
+6. Cree el primer usuario Administrador.
+7. Después entre por:
+   https://SU-DOMINIO/docentes-login.php
+8. Dentro del sistema vaya a Configuración académica y cree secciones, módulos y asignaciones de docentes.
+
+SEGURIDAD IMPORTANTE
+- Después de completar la instalación, elimine o renombre sistema/setup.php.
+- No comparta sistema/config.php ni la contraseña de MySQL.
+- Use HTTPS, que Hostinger permite activar con SSL.
+- Cree un usuario diferente para cada docente; no utilice una contraseña compartida.
+
+ARCHIVOS NUEVOS PRINCIPALES
+- docentes-login.php: acceso real con MySQL.
+- docentes.php: redirige al panel.
+- sistema/dashboard.php: panel interno.
+- sistema/students.php: estudiantes.
+- sistema/grades.php: P1-P4.
+- sistema/attendance.php: asistencia.
+- sistema/reports.php: boletines.
+- sistema/catalogs.php: configuración académica.
+- sistema/users.php: usuarios.
+- sistema/ra.php: resultados de aprendizaje.
+- sistema/schema.sql: estructura MySQL.
+- sistema/setup.php: instalador inicial.
+
+NOTA
+La página pública continúa siendo HTML para mantenerla ligera. El área protegida usa PHP + MySQL y sesiones del servidor.
+
+
+ACTUALIZACIÓN GRADUANDOS
+-----------------------
+Se integraron las fotografías #11 a #25 en graduandos-2026.html. Total actual: 25 fotos cargadas, 74 pendientes.
+
+ACTUALIZACIÓN DE CALIFICACIONES
+------------------------------
+El sistema ahora separa correctamente:
+- Áreas académicas: P1, P2, P3 y P4 (/sistema/grades.php)
+- Módulos técnicos: RA1, RA2, RA3... (/sistema/modules.php)
+
+Los RA se configuran desde /sistema/catalogs.php por cada módulo técnico.

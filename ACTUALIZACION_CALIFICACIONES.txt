@@ -1,0 +1,28 @@
+ACTUALIZACIÓN DEL SISTEMA DE CALIFICACIONES
+
+Se integró la estructura correcta de evaluación:
+
+1. ÁREAS ACADÉMICAS
+   - Se califican con P1, P2, P3 y P4.
+   - Pantalla: /sistema/grades.php
+   - Registro masivo por sección y asignatura.
+   - Promedio visual automático por estudiante.
+
+2. MÓDULOS TÉCNICOS
+   - NO utilizan P1, P2, P3 ni P4.
+   - Se califican mediante Resultados de Aprendizaje: RA1, RA2, RA3... según cada módulo.
+   - Pantalla: /sistema/modules.php
+   - Cada módulo muestra únicamente los RA configurados.
+   - Registro masivo de RA por sección.
+
+3. BOLETÍN
+   - Separa Áreas Curriculares (P1-P4) de Módulos Formativos (RA).
+   - Incluye asistencia y situación final.
+   - Puede imprimirse o guardarse como PDF desde el navegador.
+
+4. CONFIGURACIÓN
+   - El administrador crea los módulos como tipo "Módulo formativo".
+   - Luego crea RA1, RA2, RA3... con su descripción para cada módulo.
+   - Se asigna cada módulo al docente correspondiente.
+
+La base de datos existente ya incluía las tablas learning_results y ra_scores, por lo que no fue necesario cambiar la estructura SQL principal.

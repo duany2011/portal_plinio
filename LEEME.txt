@@ -1,0 +1,19 @@
+PORTAL DEL POLITÉCNICO PROF. PLINIO MARTÍNEZ
+
+1. Descomprima el archivo ZIP.
+2. Abra index.html en Google Chrome, Edge o Firefox.
+3. El Portal de estudiantes es público.
+4. El Portal de docentes incluye un acceso de demostración:
+   Usuario: docente
+   Contraseña: plinio2026
+
+IMPORTANTE:
+La contraseña de demostración funciona con JavaScript en el navegador y NO ofrece seguridad real.
+No coloque documentos confidenciales hasta conectar el portal con autenticación segura.
+
+
+GRADUANDOS 2026
+- Página: graduandos-2026.html
+- Capacidad total: 99 fotos
+- Integradas actualmente: 10
+- Pendientes: 89

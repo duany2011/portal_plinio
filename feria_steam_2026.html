@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Reseña y galería de la Feria STEAM 2026 del Politécnico Profesor Plinio Martínez">
+    <title>Feria STEAM 2026 | Politécnico Profesor Plinio Martínez</title>
+    <style>
+        :root {
+            --blue: #123b70;
+            --red: #c62838;
+            --ink: #243247;
+            --pale: #eaf2fb;
+            --bg: #f5f7fb
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.65;
+            color: var(--ink);
+            background: var(--bg)
+        }
+
+        .wrap {
+            width: min(1120px, 92%);
+            margin: auto
+        }
+
+        .hero {
+            padding: 70px 0;
+            color: white;
+            background: linear-gradient(115deg, #0c274d, #24568f);
+            border-bottom: 6px solid var(--red)
+        }
+
+        .tag {
+            display: inline-block;
+            border: 1px solid #ffffff88;
+            border-radius: 30px;
+            padding: 5px 13px;
+            font-size: .85rem;
+            text-transform: uppercase;
+            letter-spacing: .07em
+        }
+
+        h1 {
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin: 18px 0 12px
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 760px;
+            color: #edf4ff
+        }
+
+        .motto {
+            font-weight: bold;
+            margin-top: 22px
+        }
+
+        main {
+            padding: 40px 0 60px
+        }
+
+        .intro {
+            display: grid;
+            grid-template-columns: 1.5fr .8fr;
+            gap: 24px
+        }
+
+        .panel {
+            background: white;
+            padding: clamp(22px, 3vw, 34px);
+            border-radius: 16px;
+            box-shadow: 0 8px 26px #18305012
+        }
+
+        h2 {
+            color: var(--blue);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.25;
+            margin: 0 0 16px
+        }
+
+        p {
+            margin: 0 0 15px
+        }
+
+        p:last-child {
+            margin-bottom: 0
+        }
+
+        ul.details {
+            list-style: none;
+            padding: 0;
+            margin: 0
+        }
+
+        ul.details li {
+            padding: 11px 0;
+            border-bottom: 1px solid #e7edf5
+        }
+
+        ul.details li:last-child {
+            border: 0
+        }
+
+        ul.details strong {
+            display: block;
+            color: var(--blue)
+        }
+
+        .gallery-section {
+            margin-top: 44px
+        }
+
+        .section-head {
+            margin-bottom: 18px
+        }
+
+        .section-head p {
+            color: #637083;
+            max-width: 700px
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px
+        }
+
+        figure {
+            margin: 0;
+            background: white;
+            border-radius: 13px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px #18305012
+        }
+
+        .placeholder {
+            aspect-ratio: 4/3;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 18px;
+            color: #64748b;
+            background: linear-gradient(135deg, #e6edf6, #f8fafc);
+            border: 1px dashed #a9b8cc
+        }
+
+        .placeholder span {
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 8px
+        }
+
+        figure img {
+            width: 100%;
+            display: block;
+            aspect-ratio: 4/3;
+            object-fit: cover
+        }
+
+        figcaption {
+            padding: 12px 14px;
+            font-size: .94rem
+        }
+
+        .note {
+            margin-top: 20px;
+            padding: 14px 16px;
+            background: var(--pale);
+            border-left: 4px solid var(--blue);
+            border-radius: 8px;
+            font-size: .95rem
+        }
+
+        .closing {
+            margin-top: 44px;
+            padding: 30px;
+            background: var(--blue);
+            color: white;
+            border-radius: 16px;
+            text-align: center
+        }
+
+        .closing h2 {
+            color: white
+        }
+
+        .closing p {
+            max-width: 780px;
+            margin: auto
+        }
+
+        footer {
+            background: #0c274d;
+            color: #dbe7f7;
+            text-align: center;
+            padding: 22px 0;
+            font-size: .9rem
+        }
+
+        @media(max-width:800px) {
+            .intro {
+                grid-template-columns: 1fr
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+        }
+
+        @media(max-width:520px) {
+            .hero {
+                padding: 50px 0
+            }
+
+            .gallery {
+                grid-template-columns: 1fr
+            }
+
+            .panel {
+                padding: 22px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <div class="wrap">
+            <span class="tag">Experiencia educativa · 2026</span>
+            <h1>Feria STEAM 2026</h1>
+            <p class="subtitle">Ciencia, Tecnología, Ingeniería, Arte y Matemáticas al servicio del aprendizaje.</p>
+            <p class="motto">Investigar · Crear · Experimentar · Innovar</p>
+        </div>
+    </header>
+    <main class="wrap">
+        <div class="intro">
+            <article class="panel">
+                <h2>Una experiencia de ciencia e innovación</h2>
+                <p>El Politécnico Profesor Plinio Martínez celebró su Feria STEAM 2026, un espacio educativo destinado a
+                    promover la creatividad, la investigación, el pensamiento crítico y la innovación mediante el
+                    desarrollo y la presentación de proyectos escolares.</p>
+                <p>Durante la actividad, los estudiantes tuvieron la oportunidad de poner en práctica los conocimientos
+                    adquiridos en el aula, integrando distintas áreas del saber para explorar situaciones de la vida
+                    cotidiana, plantear soluciones y presentar sus ideas a través de experiencias prácticas y
+                    demostraciones.</p>
+                <p>La feria constituyó una oportunidad para fortalecer el trabajo colaborativo, la resolución de
+                    problemas, la comunicación y el uso educativo de la tecnología. Asimismo, permitió destacar el
+                    acompañamiento de los docentes y el compromiso de la comunidad educativa con una enseñanza más
+                    activa, participativa y vinculada con los desafíos del mundo actual.</p>
+                <p>Con iniciativas como esta, el centro educativo reafirma su compromiso con una educación técnica y
+                    académica que fomenta la curiosidad, el aprendizaje significativo y el desarrollo de competencias
+                    para el futuro.</p>
+            </article>
+            <aside class="panel">
+                <h2>Sobre el evento</h2>
+                <ul class="details">
+                    <li><strong>Actividad</strong>Feria STEAM 2026</li>
+                    <li><strong>Centro educativo</strong>Politécnico Profesor Plinio Martínez</li>
+                    <li><strong>Áreas integradas</strong>Ciencia, Tecnología, Ingeniería, Arte y Matemáticas</li>
+                    <li><strong>Participantes</strong>Estudiantes y docentes</li>
+                    <li><strong>Propósito</strong>Compartir proyectos, experiencias y soluciones innovadoras</li>
+                </ul>
+            </aside>
+        </div>
+
+        <section class="gallery-section">
+            <div class="section-head">
+                <h2>Apertura y momentos especiales</h2>
+                <p>Agrega fotografías de la apertura, los invitados, los docentes y la participación de los estudiantes.
+                </p>
+            </div>
+            <div class="gallery">
+                <figure>
+                    <div class="placeholder">
+                        <div><span>＋</span>Coloca aquí la foto de apertura</div>
+                    </div>
+                    <figcaption>Apertura de la Feria STEAM 2026</figcaption>
+                </figure>
+                <figure>
+                    <div class="placeholder">
+                        <div><span>＋</span>Coloca aquí una foto grupal</div>
+                    </div>
+                    <figcaption>Comunidad educativa participante</figcaption>
+                </figure>
+                <figure>
+                    <div class="placeholder">
+                        <div><span>＋</span>Coloca aquí una foto de la actividad</div>
+                    </div>
+                    <figcaption>Un espacio para aprender y compartir</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="section-head">
+                <h2>Proyectos e innovación estudiantil</h2>
+                <p>Galería para prototipos, experimentos, proyectos tecnológicos y exposiciones de los equipos.</p>
+            </div>
+            <div class="gallery">
+                <figure>
+                    <div class="placeholder">
+                        <div><span>＋</span>Coloca aquí la foto del proyecto 1</div>
+                    </div>
+                    <figcaption>Presentación de proyectos</figcaption>
+                </figure>
+                <figure>
+                    <div class="placeholder">
+                        <div><span>＋</span>Coloca aquí la foto del proyecto 2</div>
+                    </div>
+                    <figcaption>Creatividad y experimentación</figcaption>
+                </figure>
+                <figure>
+                    <div class="placeholder">
+                        <div><span>＋</span>Coloca aquí la foto del proyecto 3</div>
+                    </div>
+                    <figcaption>Tecnología aplicada al aprendizaje</figcaption>
+                </figure>
+                <figure>
+                    <div class="placeholder">
+                        <div><span>＋</span>Coloca aquí la foto del proyecto 4</div>
+                    </div>
+                    <figcaption>Trabajo colaborativo</figcaption>
+                </figure>
+                <figure>
+                    <div class="placeholder">
+                        <div><span>＋</span>Coloca aquí la foto del proyecto 5</div>
+                    </div>
+                    <figcaption>Ideas que se convierten en soluciones</figcaption>
+                </figure>
+                <figure>
+                    <div class="placeholder">
+                        <div><span>＋</span>Coloca aquí la foto del proyecto 6</div>
+                    </div>
+                    <figcaption>Estudiantes compartiendo sus resultados</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="section-head">
+                <h2>Estudiantes y docentes en acción</h2>
+                <p>Incluye imágenes del trabajo en equipo, las explicaciones de los proyectos y el acompañamiento
+                    docente.</p>
+            </div>
+            <div class="gallery">
+                <figure>
+                    <div class="placeholder">
+                        <div><span>＋</span>Coloca aquí una foto del equipo</div>
+                    </div>
+                    <figcaption>Aprendizaje en equipo</figcaption>
+                </figure>
+                <figure>
+                    <div class="placeholder">
+                        <div><span>＋</span>Coloca aquí una foto con docentes</div>
+                    </div>
+                    <figcaption>Acompañamiento y orientación docente</figcaption>
+                </figure>
+                <figure>
+                    <div class="placeholder">
+                        <div><span>＋</span>Coloca aquí una foto de cierre</div>
+                    </div>
+                    <figcaption>Una experiencia para recordar</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <div class="note"><strong>Cómo colocar las fotos:</strong> sustituye cada bloque
+            <code>&lt;div class="placeholder"&gt;...&lt;/div&gt;</code> por una imagen, por ejemplo:
+            <code>&lt;img src="fotos/proyecto-1.jpg" alt="Estudiantes presentando un proyecto"&gt;</code>. Sube primero
+            las fotos a tu portal y utiliza sus rutas o URL reales.</div>
+        <section class="closing">
+            <h2>¡Gracias por hacerlo posible!</h2>
+            <p>Felicitamos a los estudiantes, docentes y colaboradores que hicieron posible esta experiencia de
+                aprendizaje e innovación. Seguimos impulsando una educación que inspira a investigar, crear y
+                transformar.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">Politécnico Profesor Plinio Martínez · Feria STEAM 2026</div>
+    </footer>
+</body>
+
+</html>
